@@ -1,5 +1,6 @@
 
 Solving an N-puzzle board using search strategies - BFS, DFS and A* search
+
 Submission score: 98.5%
 
 I. Introduction

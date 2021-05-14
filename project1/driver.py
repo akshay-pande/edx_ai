@@ -3,9 +3,7 @@ import collections
 import heapq as h
 import sys
 import time
-import tracemalloc
-
-   
+import tracemalloc   
 
 class PuzzleBoard:
     """Class to store and work with the puzzle board"""
@@ -339,8 +337,7 @@ def main(argv):
     elif(func_name == 'dfs') :
         s.dfs();
     else:
-        s.ast();
-        
+        s.ast();        
 
 if __name__ == "__main__":
     main(sys.argv)

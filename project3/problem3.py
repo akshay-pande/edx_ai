@@ -9,6 +9,8 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 
+#Classification using GridCV
+
 out_row = 0
 df_inp = pd.read_csv("input3.csv")
 

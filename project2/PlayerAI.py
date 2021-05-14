@@ -10,14 +10,12 @@ max_depth = 6
 timeLimit = 0.19
 
 class PlayerAI(BaseAI):
-
     
     def getMove(self, grid):       
         
         self.startTime = time.clock()
         action_val = self.minimax(grid, 0)        
-        return action_val[0]
-    
+        return action_val[0]    
     
     def getCornerBonus (self,grid, maxTile):
         
@@ -28,8 +26,7 @@ class PlayerAI(BaseAI):
                 return 3.0            
             elif grid.map[3][1] == maxTile or grid.map[3][2] == maxTile:
                 return 1.0        
-        return 0
-    
+        return 0    
     
     def getTileValOccurences(self, grid):
         tile_dict = {}        
@@ -58,8 +55,7 @@ class PlayerAI(BaseAI):
                     mono_score += math.sqrt(tile_val)*((y/2)**4)*((x/2)**3)
                 else:
                     break
-        return mono_score*damp_factor_mono
-    
+        return mono_score*damp_factor_mono    
 
     def utility(self, grid):
         """
@@ -85,18 +81,14 @@ class PlayerAI(BaseAI):
 
         return output
 
-
     def terminalTest(self, grid):
         if len(grid.getAvailableCells()) == 0:
             return True        
         return False
 
-
     def minimax(self, grid, depth):              
-        return self.maximize(grid, 0, 0, float('-inf'), float('inf'))
-        
-                       
-
+        return self.maximize(grid, 0, 0, float('-inf'), float('inf'))     
+                      
     def maximize(self, grid, depth, action, alpha, beta):
 
         if(self.terminalTest(grid) or depth > max_depth or (time.clock() - self.startTime) >= timeLimit ):                       
@@ -118,8 +110,7 @@ class PlayerAI(BaseAI):
                 break
             
         return (max_action, maxval)
-
-    
+   
     def minimize(self, grid, depth, action, alpha, beta):
         if(self.terminalTest(grid)  or depth > max_depth or (time.clock() - self.startTime) >= timeLimit):                      
             return(action, self.utility(grid))

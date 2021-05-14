@@ -1,7 +1,7 @@
 import pandas as pd
 import math
 
-#Linear Regression
+#Perceptron Learning Algorithm
 
 w1 = 0
 w2 = 0

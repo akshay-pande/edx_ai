@@ -1,10 +1,11 @@
 import pandas as pd
 import math
 
+#Linear Regression
+
 w1 = 0
 w2 = 0
 w0 = 0
-
 
 def process_data_frame(df, w0, w1, w2):
     
@@ -28,16 +29,14 @@ def main():
     df_inp = pd.read_csv('input1.csv', header=None)
     orig_weights = (w0, w1, w2)     
     new_weights = process_data_frame(df_inp, w0, w1, w2)
-    out_df = pd.DataFrame([[new_weights[1], new_weights[2], new_weights[0]]])
-    
+    out_df = pd.DataFrame([[new_weights[1], new_weights[2], new_weights[0]]])    
 
     while orig_weights != new_weights:
         out_row = out_row + 1
         orig_weights = new_weights
         new_weights = process_data_frame(df_inp, orig_weights[0],
                                          orig_weights[1], orig_weights[2])
-        out_df.loc[out_row] = [ new_weights[1], new_weights[2],new_weights[0]]
-       
+        out_df.loc[out_row] = [ new_weights[1], new_weights[2],new_weights[0]]       
 
     out_df.to_csv('output1.csv', header=False, index=False)
    

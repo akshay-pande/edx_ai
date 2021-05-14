@@ -1,0 +1,7 @@
+svm_linear,0.59,0.59
+svm_polynomial,0.696667,0.715
+svm_rbf,0.946666667,0.95
+logistic,0.59,0.585
+knn,0.95,0.92
+decision_tree,0.99,1.0
+random_forest,0.946666667,0.965

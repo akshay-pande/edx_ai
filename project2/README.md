@@ -1,7 +1,5 @@
 Creating an intelligent playing agent for the 2048 game using minimax algorithm and alpha-beta pruning
 
-Submission score: 100%
-
 The algorithm reached 2048 in 40% of the trials, 1024 in 50% 
 
 The PlayerAI.py file was created by me, the remaining files were provided as skeleton code in the assignment

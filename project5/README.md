@@ -1,7 +1,5 @@
 NLP classification of IMDB movie reviews using unigrams, bigrams and TF-IDF
 
-Submission score: 81%
-
 Main file: driver.py
 
 Unzip imdb_tr.zip to same folder as program before proceeding

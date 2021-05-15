@@ -1,8 +1,6 @@
 
 Solving an N-puzzle board using search strategies - BFS, DFS and A* search
 
-Submission score: 98.5%
-
 I. Introduction
 
 An instance of the N-puzzle game consists of a board holding N = m^2 − 1 (m = 3, 4, 5, ...) distinct movable tiles, plus an empty space. The tiles are numbers from the set {1, …, m^2 − 1}. For any such board, the empty space may be legally swapped with any tile horizontally or vertically adjacent to it. In this assignment, we will represent the blank space with the number 0 and focus on the m = 3 case (8-puzzle).
